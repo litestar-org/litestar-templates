@@ -1,5 +1,3 @@
-"""Dependency providers for the books domain."""
-
 from collections.abc import AsyncIterator
 
 from litestar.di import NamedDependency

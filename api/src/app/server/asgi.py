@@ -1,5 +1,3 @@
-"""ASGI entry point. Run with `uv run litestar run` (see pyproject/README)."""
-
 from litestar import Litestar
 
 from app.server.core import ApplicationCore

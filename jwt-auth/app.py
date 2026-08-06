@@ -1,15 +1,3 @@
-"""JWT authentication with Litestar's first-party ``litestar.security.jwt``.
-
-- ``POST /login`` verifies credentials and issues a JWT (returned in the
-  ``Authorization`` response header).
-- Every other route requires a valid ``Authorization: Bearer <token>`` header;
-  the decoded user is available as ``request.user``.
-
-The user "database" is an in-memory dict with plaintext passwords — replace it
-with a real store and password hashing (e.g. ``passlib`` or ``argon2-cffi``)
-before shipping anything.
-"""
-
 import os
 
 import msgspec

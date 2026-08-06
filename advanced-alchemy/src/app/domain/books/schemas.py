@@ -1,5 +1,3 @@
-"""Wire-format schemas for the books domain (msgspec Structs)."""
-
 import msgspec
 
 

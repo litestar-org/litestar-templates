@@ -1,10 +1,3 @@
-"""Application configuration.
-
-SQLite by default so the starter runs with zero setup. Point ``DATABASE_URL``
-at PostgreSQL (``postgresql+asyncpg://...``) when ready — add ``asyncpg`` to
-the dependencies first.
-"""
-
 import os
 
 from advanced_alchemy.extensions.litestar import SQLAlchemyAsyncConfig

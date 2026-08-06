@@ -1,10 +1,3 @@
-"""Application core: composes routes, state, and error handling.
-
-The same pattern as litestar-fullstack's ``ApplicationCore`` — a single
-``InitPluginProtocol`` plugin that wires every domain into the app. Domains
-stay self-contained; this is the only place that knows about all of them.
-"""
-
 from litestar.config.app import AppConfig
 from litestar.openapi.config import OpenAPIConfig
 from litestar.plugins import InitPluginProtocol

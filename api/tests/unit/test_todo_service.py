@@ -1,5 +1,3 @@
-"""Service tests — pure domain logic, no HTTP involved."""
-
 import pytest
 
 from app.domain.todos.schemas import TodoCreate

@@ -1,5 +1,3 @@
-"""Route tests — full HTTP round-trips through the app."""
-
 import pytest
 from litestar.status_codes import (
     HTTP_200_OK,

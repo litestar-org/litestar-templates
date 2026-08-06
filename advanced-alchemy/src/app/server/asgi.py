@@ -1,5 +1,3 @@
-"""ASGI entry point. Run with `uv run litestar --app-dir src run` (see README)."""
-
 from advanced_alchemy.extensions.litestar import SQLAlchemyPlugin
 from litestar import Litestar
 

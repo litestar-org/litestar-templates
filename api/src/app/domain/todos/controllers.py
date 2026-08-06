@@ -1,5 +1,3 @@
-"""HTTP endpoints for the todos domain — thin: validate, delegate, return."""
-
 from uuid import UUID
 
 from litestar import Controller, delete, get, post, put

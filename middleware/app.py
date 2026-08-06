@@ -1,10 +1,3 @@
-"""Custom ASGI middleware: adds an `X-Response-Time` header to every response.
-
-Shows the `ASGIMiddleware` base class, scope filtering (HTTP only), request
-exclusions via `should_bypass_for_scope`, and how to mutate outgoing response
-headers.
-"""
-
 import time
 
 from litestar import Litestar, get

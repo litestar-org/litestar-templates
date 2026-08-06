@@ -1,5 +1,3 @@
-"""Example app consuming the plugin. Run with `uv run litestar run`."""
-
 from litestar import Litestar, get
 
 from litestar_example_plugin import HealthCheckConfig, HealthCheckPlugin

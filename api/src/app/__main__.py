@@ -1,12 +1,3 @@
-"""CLI entry point (litestar-fullstack pattern).
-
-Exposed as the ``app`` script in pyproject.toml, so every Litestar CLI
-command works without ``--app-dir`` or ``LITESTAR_APP``:
-
-    uv run app run --reload
-    uv run app routes
-"""
-
 import os
 import sys
 

@@ -1,5 +1,3 @@
-"""Dependency providers for the todos domain."""
-
 from litestar.datastructures import State
 
 from app.domain.todos.services import TodoService

@@ -1,11 +1,3 @@
-"""Business logic for the todos domain.
-
-Services own data access and raise domain errors — they know nothing about
-HTTP. This one stores todos in memory; swap the internals for a real
-repository (see the ``advanced-alchemy`` starter) without touching the
-controllers.
-"""
-
 from uuid import UUID, uuid4
 
 from app.domain.todos.schemas import Todo, TodoCreate

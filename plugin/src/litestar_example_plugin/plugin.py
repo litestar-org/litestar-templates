@@ -1,10 +1,3 @@
-"""An example Litestar plugin: adds a configurable health-check endpoint.
-
-Implements ``InitPlugin`` — the hook that lets a plugin mutate the
-``AppConfig`` (routes, dependencies, middleware, state, lifespan) before the
-app finishes booting.
-"""
-
 from dataclasses import dataclass
 
 from litestar import get

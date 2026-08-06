@@ -1,11 +1,3 @@
-"""Application core: composes routes and error handling.
-
-Same pattern as litestar-fullstack's ``ApplicationCore`` — one
-``InitPluginProtocol`` plugin that wires every domain into the app. Database
-plumbing stays in ``SQLAlchemyPlugin`` (see ``asgi.py``); repository errors
-map to HTTP responses via Advanced Alchemy's first-party handler.
-"""
-
 from advanced_alchemy.exceptions import RepositoryError
 from advanced_alchemy.extensions.litestar.exception_handler import (
     exception_to_http_response,

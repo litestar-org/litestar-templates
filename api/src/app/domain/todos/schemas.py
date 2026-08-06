@@ -1,5 +1,3 @@
-"""Wire-format schemas for the todos domain (msgspec Structs)."""
-
 from uuid import UUID
 
 import msgspec

@@ -1,10 +1,3 @@
-"""Domain exceptions and their mapping to HTTP responses.
-
-Domain code (services) raises these — it never imports HTTP exceptions.
-The application core registers :func:`exception_to_http_response` so the
-mapping to status codes lives in exactly one place.
-"""
-
 from litestar import Request, Response
 from litestar.status_codes import (
     HTTP_404_NOT_FOUND,

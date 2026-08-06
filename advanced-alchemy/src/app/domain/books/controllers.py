@@ -1,5 +1,3 @@
-"""HTTP endpoints for the books domain — thin: validate, delegate, return."""
-
 from uuid import UUID
 
 import msgspec

@@ -1,5 +1,3 @@
-"""System endpoints: health and liveness."""
-
 from litestar import Controller, get
 
 
