@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 from litestar.testing import AsyncTestClient
 
-from app import create_app
+from app.server.asgi import create_app
 
 
 @pytest.fixture

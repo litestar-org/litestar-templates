@@ -1,7 +1,7 @@
 [project]
 name = "litestar-advanced-alchemy-starter"
 version = "0.1.0"
-description = "Database starter with Advanced Alchemy — SQLAlchemy models, repository/service layer, and CRUD endpoints."
+description = "Domain-driven database starter with Advanced Alchemy — SQLAlchemy models, repository/service layer, and CRUD endpoints."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -13,8 +13,9 @@ dependencies = [
 [dependency-groups]
 dev = ["pytest>=8", "anyio>=4", "httpx>=0.28"]
 
-[tool.uv]
-package = false
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.pytest.ini_options]
-pythonpath = ["."]
+[tool.hatch.build.targets.wheel]
+packages = ["src/app"]

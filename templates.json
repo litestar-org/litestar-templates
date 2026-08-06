@@ -34,8 +34,8 @@
     {
       "name": "advanced-alchemy",
       "directory": "advanced-alchemy",
-      "description": "Database starter with Advanced Alchemy — SQLAlchemy models, repository/service layer, and CRUD endpoints.",
-      "tags": ["database", "sqlalchemy", "advanced-alchemy"]
+      "description": "Domain-driven database starter with Advanced Alchemy — SQLAlchemy models, repository/service layer, and CRUD endpoints.",
+      "tags": ["database", "sqlalchemy", "advanced-alchemy", "ddd"]
     }
   ]
 }

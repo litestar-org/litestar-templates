@@ -15,7 +15,7 @@ One folder per starter — every starter is a small, self-contained, tested
 | [`middleware`](./middleware) | Custom ASGI middleware — response timing header with scope filtering. |
 | [`plugin`](./plugin) | Plugin-authoring starter — a packaged `InitPlugin` with config and tests. |
 | [`jwt-auth`](./jwt-auth) | JWT authentication — login endpoint, protected routes, auth tests. |
-| [`advanced-alchemy`](./advanced-alchemy) | Database CRUD with Advanced Alchemy's repository/service layer. |
+| [`advanced-alchemy`](./advanced-alchemy) | Domain-driven database CRUD — centralized models + Advanced Alchemy repository/service layer, litestar-fullstack style. |
 
 The machine-readable list lives in [`templates.json`](./templates.json).
 
