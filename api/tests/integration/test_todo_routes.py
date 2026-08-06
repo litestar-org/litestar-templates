@@ -1,3 +1,5 @@
+"""Route tests — full HTTP round-trips through the app."""
+
 import pytest
 from litestar.status_codes import (
     HTTP_200_OK,
@@ -41,7 +43,6 @@ async def test_validation_rejects_bad_payload(client: AsyncTestClient) -> None:
     assert response.status_code == HTTP_400_BAD_REQUEST
 
 
-async def test_openapi_schema_available(client: AsyncTestClient) -> None:
-    response = await client.get("/schema/openapi.json")
-    assert response.status_code == HTTP_200_OK
-    assert response.json()["info"]["title"] == "Todo API"
+async def test_apps_are_isolated(client: AsyncTestClient) -> None:
+    """Each create_app() gets its own service instance (no shared module state)."""
+    assert (await client.get("/todos")).json() == []

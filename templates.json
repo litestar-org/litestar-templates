@@ -10,8 +10,8 @@
     {
       "name": "api",
       "directory": "api",
-      "description": "REST API starter with a CRUD controller, msgspec models, validation, and OpenAPI documentation.",
-      "tags": ["api", "openapi", "crud"]
+      "description": "Domain-driven REST API starter — bounded contexts with controllers/schemas/services, an application core plugin, and OpenAPI documentation.",
+      "tags": ["api", "openapi", "crud", "ddd"]
     },
     {
       "name": "middleware",

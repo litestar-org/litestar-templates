@@ -11,7 +11,7 @@ One folder per starter — every starter is a small, self-contained, tested
 | Name | Description |
 | --- | --- |
 | [`minimal`](./minimal) | Smallest possible Litestar app — a single route, ready to run. |
-| [`api`](./api) | REST API with a CRUD controller, msgspec models, validation, and OpenAPI docs. |
+| [`api`](./api) | Domain-driven REST API — bounded contexts (controllers/schemas/services) composed by an application core plugin, litestar-fullstack style. |
 | [`middleware`](./middleware) | Custom ASGI middleware — response timing header with scope filtering. |
 | [`plugin`](./plugin) | Plugin-authoring starter — a packaged `InitPlugin` with config and tests. |
 | [`jwt-auth`](./jwt-auth) | JWT authentication — login endpoint, protected routes, auth tests. |
