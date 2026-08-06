@@ -32,10 +32,12 @@ tests/
 
 ```sh
 uv sync
-uv run litestar --app-dir src run --reload
-# or, fullstack-style:
-LITESTAR_APP=app.server.asgi:app uv run litestar run --reload
+uv run app run --reload
 ```
+
+The `app` script (see `[project.scripts]` and `src/app/__main__.py`) wraps the
+Litestar CLI with `LITESTAR_APP` preset — every subcommand works without
+`--app-dir`: `uv run app routes`, `uv run app version`, …
 
 - API: <http://127.0.0.1:8000/todos>
 - OpenAPI docs: <http://127.0.0.1:8000/schema>

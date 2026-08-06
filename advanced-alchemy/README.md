@@ -31,10 +31,12 @@ tests/
 
 ```sh
 uv sync
-uv run litestar --app-dir src run --reload
-# or, fullstack-style:
-LITESTAR_APP=app.server.asgi:app uv run litestar run --reload
+uv run app run --reload
 ```
+
+The `app` script (see `[project.scripts]` and `src/app/__main__.py`) wraps the
+Litestar CLI with `LITESTAR_APP` preset — every subcommand works without
+`--app-dir`: `uv run app routes`, `uv run app database upgrade`, …
 
 - API: <http://127.0.0.1:8000/books>
 - OpenAPI docs: <http://127.0.0.1:8000/schema>
@@ -44,7 +46,7 @@ Uses SQLite (`db.sqlite3`) by default so it runs with zero setup. Point
 first):
 
 ```sh
-DATABASE_URL=postgresql+asyncpg://user:pass@localhost/db uv run litestar --app-dir src run
+DATABASE_URL=postgresql+asyncpg://user:pass@localhost/db uv run app run
 ```
 
 ## Test
@@ -72,7 +74,7 @@ uv run pytest
 - New bounded context → model in `db/models/`, package under `domain/`,
   registered in `server/core.py`.
 - Migrations: Advanced Alchemy bundles Alembic —
-  `uv run litestar --app-dir src database make-migrations` / `database upgrade`
+  `uv run app database make-migrations` / `uv run app database upgrade`
   replace `create_all=True` for real deployments.
 - Pagination and filtering: `advanced_alchemy.filters` +
   `create_filter_dependencies`.

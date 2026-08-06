@@ -6,6 +6,9 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["litestar[standard]>=2.24"]
 
+[project.scripts]
+app = "app.__main__:run_cli"
+
 [dependency-groups]
 dev = ["pytest>=8", "anyio>=4", "httpx>=0.28"]
 
