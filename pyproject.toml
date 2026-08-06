@@ -1,0 +1,22 @@
+# Repo-level tooling configuration only — this is not a package.
+# Each starter is its own uv project; linting runs from the repo root via
+# `uvx ruff check` / `uvx ruff format --check` (see .github/workflows/ci.yml)
+# so ruff is not a dependency of any starter.
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # bugbear
+    "SIM", # simplify
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "litestar_example_plugin"]
