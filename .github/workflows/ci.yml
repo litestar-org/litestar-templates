@@ -61,8 +61,18 @@ jobs:
           print(f"manifest OK — {len(manifest['templates'])} templates")
           EOF
 
+  checks:
+    # Aggregate gate: everything fast (lint, security, manifest) must pass
+    # before the test matrix spends 6 runners.
+    name: Checks
+    needs: [zizmor, lint, manifest]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "All checks passed"
+
   test:
     name: Test ${{ matrix.template }}
+    needs: checks
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
