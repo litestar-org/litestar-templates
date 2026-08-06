@@ -1,7 +1,7 @@
 [project]
 name = "litestar-advanced-alchemy-starter"
 version = "0.1.0"
-description = "Domain-driven database starter with Advanced Alchemy — SQLAlchemy models, repository/service layer, and CRUD endpoints."
+description = "CRUD on a real database with SQLAlchemy models and Advanced Alchemy services."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

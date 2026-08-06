@@ -1,7 +1,7 @@
 [project]
 name = "litestar-example-plugin"
 version = "0.1.0"
-description = "Litestar plugin-authoring starter — a packaged InitPlugin with config, an example app, and tests."
+description = "Build and package your own Litestar plugin, with an example app and tests included."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["litestar>=2.24"]

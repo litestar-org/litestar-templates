@@ -6,7 +6,7 @@ from app.server.core import ApplicationCore
 
 
 def create_app(database_url: str = DATABASE_URL) -> Litestar:
-    """App factory — tests inject their own database URL."""
+    """App factory; tests inject their own database URL."""
     return Litestar(
         plugins=[
             ApplicationCore(),

@@ -1,7 +1,7 @@
 [project]
 name = "litestar-jwt-auth-starter"
 version = "0.1.0"
-description = "JWT authentication starter using litestar.security.jwt — login endpoint, protected routes, and auth tests."
+description = "Login, tokens, and protected routes with Litestar's built-in JWT auth."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["litestar[standard,jwt]>=2.24"]

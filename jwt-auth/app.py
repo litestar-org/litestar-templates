@@ -21,7 +21,7 @@ class Credentials(msgspec.Struct):
     password: str
 
 
-# Demo store — replace with a real database and hashed passwords.
+# Demo store; replace with a real database and hashed passwords.
 USERS: dict[str, User] = {"admin": User(id="admin", name="Admin User")}
 PASSWORDS: dict[str, str] = {"admin": "s3cret"}
 

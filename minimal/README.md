@@ -21,5 +21,5 @@ uv run pytest
 
 ## Next steps
 
-- Add routes and group them in a `Controller` — see the [`api`](../api) starter.
+- Add routes and group them in a `Controller`; see the [`api`](../api) starter.
 - Litestar documentation: <https://docs.litestar.dev/>

@@ -1,7 +1,7 @@
 [project]
 name = "litestar-api-starter"
 version = "0.1.0"
-description = "Domain-driven REST API starter — bounded contexts with controllers/schemas/services, an application core plugin, and OpenAPI documentation."
+description = "A REST API organized by domain, the same way litestar-fullstack does it, with OpenAPI docs built in."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["litestar[standard]>=2.24"]

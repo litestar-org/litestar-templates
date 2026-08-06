@@ -1,7 +1,7 @@
 [project]
 name = "litestar-minimal-starter"
 version = "0.1.0"
-description = "Smallest possible Litestar app — a single route, ready to run."
+description = "A single route and nothing else. The fastest way to try Litestar."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["litestar[standard]>=2.24"]

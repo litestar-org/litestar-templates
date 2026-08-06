@@ -16,12 +16,12 @@ src/app/
 │       └── _book.py        (private modules, re-exported in __init__)
 ├── domain/
 │   └── books/              one package per bounded context
-│       ├── controllers.py  HTTP layer — thin: validate, delegate, return
+│       ├── controllers.py  thin HTTP layer: validate, delegate, return
 │       ├── deps.py         request-scoped service provider
 │       ├── schemas.py      msgspec wire-format models
-│       └── services.py     SQLAlchemyAsyncRepositoryService — owns data access
+│       └── services.py     SQLAlchemyAsyncRepositoryService; owns data access
 └── server/
-    ├── core.py             ApplicationCore (InitPluginProtocol) — wires all domains
+    ├── core.py             ApplicationCore (InitPluginProtocol) wiring all domains
     └── asgi.py             create_app() factory + SQLAlchemyPlugin
 tests/
 └── integration/            full request/response round-trips on a temp database
@@ -35,7 +35,7 @@ uv run app run --reload
 ```
 
 The `app` script (see `[project.scripts]` and `src/app/__main__.py`) wraps the
-Litestar CLI with `LITESTAR_APP` preset — every subcommand works without
+Litestar CLI with `LITESTAR_APP` preset, so every subcommand works without
 `--app-dir`: `uv run app routes`, `uv run app database upgrade`, …
 
 - API: <http://127.0.0.1:8000/books>
@@ -57,15 +57,15 @@ uv run pytest
 
 ## What it shows
 
-- **Centralized models** (`db/models/`) — domains import models from one
+- **Centralized models** (`db/models/`): domains import models from one
   place, never from each other
-- **Domain isolation** — `books` owns its controllers, schemas, services, and
+- **Domain isolation**: `books` owns its controllers, schemas, services, and
   providers; `server/core.py` is the only module that knows every domain
-- `SQLAlchemyAsyncRepositoryService` + typed repository — data access lives in
+- `SQLAlchemyAsyncRepositoryService` + typed repository: data access lives in
   the service layer, handlers stay thin
 - `SQLAlchemyPlugin` session management with per-request autocommit
   (`before_send_handler="autocommit"`)
-- Advanced Alchemy's first-party `exception_to_http_response` — repository
+- Advanced Alchemy's first-party `exception_to_http_response`: repository
   errors map to 404/409 automatically
 - An app factory (`create_app`) so tests run against an isolated database
 
@@ -73,7 +73,7 @@ uv run pytest
 
 - New bounded context → model in `db/models/`, package under `domain/`,
   registered in `server/core.py`.
-- Migrations: Advanced Alchemy bundles Alembic —
+- Migrations: Advanced Alchemy bundles Alembic;
   `uv run app database make-migrations` / `uv run app database upgrade`
   replace `create_all=True` for real deployments.
 - Pagination and filtering: `advanced_alchemy.filters` +

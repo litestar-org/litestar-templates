@@ -27,7 +27,7 @@ uv run pytest
 
 ## What it shows
 
-- `JWTAuth[User]` wired via `on_app_init` — protection is the default,
+- `JWTAuth[User]` wired via `on_app_init`: protection is the default,
   `exclude` lists the public routes
 - `retrieve_user_handler` mapping a decoded `Token` to your user object
 - `request.user` typed access in handlers
@@ -36,6 +36,6 @@ uv run pytest
 ## Before production
 
 - Replace the in-memory user dict with a real database.
-- Hash passwords (`argon2-cffi`, `passlib`) — never store plaintext.
+- Hash passwords (`argon2-cffi`, `passlib`); never store plaintext.
 - Set `JWT_SECRET` from the environment; rotate it like any credential.
 - Consider `JWTCookieAuth` for browser clients (httpOnly cookies).

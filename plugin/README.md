@@ -28,7 +28,7 @@ uv run pytest
 
 ## What it shows
 
-- `InitPluginProtocol.on_app_init` — mutating `AppConfig` (routes, deps,
+- `InitPluginProtocol.on_app_init`: mutating `AppConfig` (routes, deps,
   middleware, state, lifespan) before the app boots
 - A dataclass config object, the convention used by first-party plugins
 - src-layout packaging with hatchling, ready for PyPI

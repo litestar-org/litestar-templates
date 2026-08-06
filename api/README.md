@@ -4,7 +4,7 @@ A REST API structured the way
 [litestar-fullstack](https://github.com/litestar-org/litestar-fullstack)
 structures its Python side: self-contained **domain packages** composed by a
 single **application core plugin**. Storage is in-memory so the pattern stays
-front and center — swap the service internals for a database when ready.
+front and center. Swap the service internals for a database when ready.
 
 ## Layout
 
@@ -14,14 +14,14 @@ src/app/
 │   ├── system/
 │   │   └── controllers.py  health endpoint
 │   └── todos/
-│       ├── controllers.py  HTTP layer — thin: validate, delegate, return
+│       ├── controllers.py  thin HTTP layer: validate, delegate, return
 │       ├── deps.py         dependency providers for this domain
 │       ├── schemas.py      msgspec wire-format models
-│       └── services.py     business logic — owns data, raises domain errors
+│       └── services.py     business logic; owns data, raises domain errors
 ├── lib/
 │   └── exceptions.py       domain errors + the single error→HTTP mapping
 └── server/
-    ├── core.py             ApplicationCore (InitPluginProtocol) — wires all domains
+    ├── core.py             ApplicationCore (InitPluginProtocol) wiring all domains
     └── asgi.py             create_app() factory + ASGI entry point
 tests/
 ├── unit/                   service tests, no HTTP
@@ -36,7 +36,7 @@ uv run app run --reload
 ```
 
 The `app` script (see `[project.scripts]` and `src/app/__main__.py`) wraps the
-Litestar CLI with `LITESTAR_APP` preset — every subcommand works without
+Litestar CLI with `LITESTAR_APP` preset, so every subcommand works without
 `--app-dir`: `uv run app routes`, `uv run app version`, …
 
 - API: <http://127.0.0.1:8000/todos>
@@ -50,13 +50,13 @@ uv run pytest
 
 ## What it shows
 
-- **Domain isolation** — `todos` owns its controllers, schemas, services, and
+- **Domain isolation**: `todos` owns its controllers, schemas, services, and
   providers; `server/core.py` is the only module that knows every domain.
-- **Services own logic** — handlers never touch storage or raise HTTP errors;
+- **Services own logic**: handlers never touch storage or raise HTTP errors;
   services raise `NotFoundError` and one registered handler maps it to a 404.
-- **App factory** — `create_app()` builds isolated instances, so tests never
+- **App factory**: `create_app()` builds isolated instances, so tests never
   share state.
-- **3.0-ready handler style** — `FromPath[UUID]` and `NamedDependency[...]`
+- **3.0-ready handler style**: `FromPath[UUID]` and `NamedDependency[...]`
   markers throughout.
 
 ## Growing it

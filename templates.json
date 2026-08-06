@@ -5,50 +5,74 @@
       "name": "minimal",
       "directory": "minimal",
       "title": "Minimal Litestar",
-      "description": "Smallest possible Litestar app — a single route, ready to run.",
+      "description": "A single route and nothing else. The fastest way to try Litestar.",
       "icon": "i-lucide-globe",
-      "tags": ["beginner", "api"]
+      "tags": [
+        "beginner",
+        "api"
+      ]
     },
     {
       "name": "api",
       "directory": "api",
       "title": "Litestar API",
-      "description": "Domain-driven REST API starter — bounded contexts with controllers/schemas/services, an application core plugin, and OpenAPI documentation.",
+      "description": "A REST API organized by domain, the same way litestar-fullstack does it, with OpenAPI docs built in.",
       "icon": "i-lucide-leaf",
       "featured": true,
-      "tags": ["api", "openapi", "crud", "ddd"]
+      "tags": [
+        "api",
+        "openapi",
+        "crud",
+        "ddd"
+      ]
     },
     {
       "name": "middleware",
       "directory": "middleware",
       "title": "Middleware",
-      "description": "Custom ASGI middleware starter — response timing header with scope filtering and tests.",
+      "description": "Write your own ASGI middleware. Ships a working timing-header example with tests.",
       "icon": "i-lucide-layers",
-      "tags": ["middleware", "asgi"]
+      "tags": [
+        "middleware",
+        "asgi"
+      ]
     },
     {
       "name": "plugin",
       "directory": "plugin",
       "title": "Plugin",
-      "description": "Litestar plugin-authoring starter — a packaged InitPlugin with config, an example app, and tests.",
+      "description": "Build and package your own Litestar plugin, with an example app and tests included.",
       "icon": "i-lucide-puzzle",
-      "tags": ["plugin", "library", "packaging"]
+      "tags": [
+        "plugin",
+        "library",
+        "packaging"
+      ]
     },
     {
       "name": "jwt-auth",
       "directory": "jwt-auth",
       "title": "JWT Authentication",
-      "description": "JWT authentication starter using litestar.security.jwt — login endpoint, protected routes, and auth tests.",
+      "description": "Login, tokens, and protected routes with Litestar's built-in JWT auth.",
       "icon": "i-lucide-shield-check",
-      "tags": ["auth", "jwt", "security"]
+      "tags": [
+        "auth",
+        "jwt",
+        "security"
+      ]
     },
     {
       "name": "advanced-alchemy",
       "directory": "advanced-alchemy",
       "title": "Advanced Alchemy (SQLAlchemy)",
-      "description": "Domain-driven database starter with Advanced Alchemy — SQLAlchemy models, repository/service layer, and CRUD endpoints.",
+      "description": "CRUD on a real database with SQLAlchemy models and Advanced Alchemy services.",
       "icon": "i-lucide-database",
-      "tags": ["database", "sqlalchemy", "advanced-alchemy", "ddd"]
+      "tags": [
+        "database",
+        "sqlalchemy",
+        "advanced-alchemy",
+        "ddd"
+      ]
     }
   ]
 }
