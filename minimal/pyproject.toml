@@ -1,0 +1,16 @@
+[project]
+name = "litestar-minimal-starter"
+version = "0.1.0"
+description = "Smallest possible Litestar app — a single route, ready to run."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["litestar[standard]>=2.24"]
+
+[dependency-groups]
+dev = ["pytest>=8", "anyio>=4", "httpx>=0.28"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

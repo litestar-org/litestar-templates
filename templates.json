@@ -1,0 +1,41 @@
+{
+  "$schema": "./templates.schema.json",
+  "templates": [
+    {
+      "name": "minimal",
+      "directory": "minimal",
+      "description": "Smallest possible Litestar app — a single route, ready to run.",
+      "tags": ["beginner", "api"]
+    },
+    {
+      "name": "api",
+      "directory": "api",
+      "description": "REST API starter with a CRUD controller, msgspec models, validation, and OpenAPI documentation.",
+      "tags": ["api", "openapi", "crud"]
+    },
+    {
+      "name": "middleware",
+      "directory": "middleware",
+      "description": "Custom ASGI middleware starter — response timing header with scope filtering and tests.",
+      "tags": ["middleware", "asgi"]
+    },
+    {
+      "name": "plugin",
+      "directory": "plugin",
+      "description": "Litestar plugin-authoring starter — a packaged InitPlugin with config, an example app, and tests.",
+      "tags": ["plugin", "library", "packaging"]
+    },
+    {
+      "name": "jwt-auth",
+      "directory": "jwt-auth",
+      "description": "JWT authentication starter using litestar.security.jwt — login endpoint, protected routes, and auth tests.",
+      "tags": ["auth", "jwt", "security"]
+    },
+    {
+      "name": "advanced-alchemy",
+      "directory": "advanced-alchemy",
+      "description": "Database starter with Advanced Alchemy — SQLAlchemy models, repository/service layer, and CRUD endpoints.",
+      "tags": ["database", "sqlalchemy", "advanced-alchemy"]
+    }
+  ]
+}

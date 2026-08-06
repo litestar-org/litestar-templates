@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Litestar starter templates manifest",
+  "type": "object",
+  "required": ["templates"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "templates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "directory", "description"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$",
+            "description": "Template identifier used by tooling (e.g. `litestar new <name>`)."
+          },
+          "directory": {
+            "type": "string",
+            "description": "Folder in this repository containing the template."
+          },
+          "description": { "type": "string" },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

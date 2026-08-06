@@ -1,0 +1,16 @@
+[project]
+name = "litestar-jwt-auth-starter"
+version = "0.1.0"
+description = "JWT authentication starter using litestar.security.jwt — login endpoint, protected routes, and auth tests."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["litestar[standard,jwt]>=2.24"]
+
+[dependency-groups]
+dev = ["pytest>=8", "anyio>=4", "httpx>=0.28"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
