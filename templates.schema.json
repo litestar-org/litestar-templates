@@ -9,7 +9,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["name", "directory", "description"],
+        "required": ["name", "directory", "title", "description", "icon"],
         "properties": {
           "name": {
             "type": "string",
@@ -20,7 +20,20 @@
             "type": "string",
             "description": "Folder in this repository containing the template."
           },
+          "title": {
+            "type": "string",
+            "description": "Human-readable display name (used by litestar.dev)."
+          },
           "description": { "type": "string" },
+          "icon": {
+            "type": "string",
+            "pattern": "^i-[a-z0-9-]+$",
+            "description": "Iconify icon name (used by litestar.dev)."
+          },
+          "featured": {
+            "type": "boolean",
+            "description": "Highlight as the recommended starter (used by litestar.dev)."
+          },
           "tags": {
             "type": "array",
             "items": { "type": "string" }

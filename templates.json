@@ -4,37 +4,50 @@
     {
       "name": "minimal",
       "directory": "minimal",
+      "title": "Minimal Litestar",
       "description": "Smallest possible Litestar app — a single route, ready to run.",
+      "icon": "i-lucide-globe",
       "tags": ["beginner", "api"]
     },
     {
       "name": "api",
       "directory": "api",
+      "title": "Litestar API",
       "description": "Domain-driven REST API starter — bounded contexts with controllers/schemas/services, an application core plugin, and OpenAPI documentation.",
+      "icon": "i-lucide-leaf",
+      "featured": true,
       "tags": ["api", "openapi", "crud", "ddd"]
     },
     {
       "name": "middleware",
       "directory": "middleware",
+      "title": "Middleware",
       "description": "Custom ASGI middleware starter — response timing header with scope filtering and tests.",
+      "icon": "i-lucide-layers",
       "tags": ["middleware", "asgi"]
     },
     {
       "name": "plugin",
       "directory": "plugin",
+      "title": "Plugin",
       "description": "Litestar plugin-authoring starter — a packaged InitPlugin with config, an example app, and tests.",
+      "icon": "i-lucide-puzzle",
       "tags": ["plugin", "library", "packaging"]
     },
     {
       "name": "jwt-auth",
       "directory": "jwt-auth",
+      "title": "JWT Authentication",
       "description": "JWT authentication starter using litestar.security.jwt — login endpoint, protected routes, and auth tests.",
+      "icon": "i-lucide-shield-check",
       "tags": ["auth", "jwt", "security"]
     },
     {
       "name": "advanced-alchemy",
       "directory": "advanced-alchemy",
+      "title": "Advanced Alchemy (SQLAlchemy)",
       "description": "Domain-driven database starter with Advanced Alchemy — SQLAlchemy models, repository/service layer, and CRUD endpoints.",
+      "icon": "i-lucide-database",
       "tags": ["database", "sqlalchemy", "advanced-alchemy", "ddd"]
     }
   ]
